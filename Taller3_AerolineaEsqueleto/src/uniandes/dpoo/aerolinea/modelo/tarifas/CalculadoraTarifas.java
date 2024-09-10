@@ -22,7 +22,7 @@ public abstract class CalculadoraTarifas {
 		return (int) (base * desc);
 	}
 	
-	protected int calcularDitanciaVuelo(Ruta ruta)
+	protected int calcularDistanciaVuelo(Ruta ruta)
 	{
 		int distancia = Aeropuerto.calcularDistancia(ruta.getOrigen(), ruta.getDestino());
 		return distancia;

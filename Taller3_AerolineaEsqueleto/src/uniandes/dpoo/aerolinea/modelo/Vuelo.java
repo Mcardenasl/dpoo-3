@@ -43,7 +43,7 @@ public class Vuelo {
 	
 	public int venderTiquetes(Cliente cliente, CalculadoraTarifas calculadora, int cantidad) throws VueloSobrevendidoException
 	{
-		int precio = calculadora.calcularTarifa(null,cliente);
+		int precio = calculadora.calcularTarifa(this,cliente);
 		int total = precio * cantidad;
 		
 		for (int i = 0; i < cantidad; i++) {

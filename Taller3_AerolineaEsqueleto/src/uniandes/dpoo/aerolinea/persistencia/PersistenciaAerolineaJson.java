@@ -10,6 +10,8 @@ import uniandes.dpoo.aerolinea.exceptions.InformacionInconsistenteException;
 import uniandes.dpoo.aerolinea.modelo.Aerolinea;
 
 public class PersistenciaAerolineaJson {
+	
+	
 	public void cargarAerolinea( String archivo, Aerolinea aerolinea ) throws IOException, InformacionInconsistenteException
     {
         String jsonCompleto = new String( Files.readAllBytes( new File( archivo ).toPath( ) ) );

@@ -1,5 +1,4 @@
 package uniandes.dpoo.aerolinea.modelo.cliente;
-import uniandes.dpoo.aerolinea.modelo.cliente.Cliente;
 
 
 public class ClienteNatural extends Cliente{
@@ -12,11 +11,14 @@ public class ClienteNatural extends Cliente{
 	{
 		this.nombre = nombre;
 	}
-	public java.lang.String getIdentificador()
-	{
-		return Cliente.getIdentificador();
-	}
-	
-	
+	public String getTipoCliente()
+    {
+    	return NATURAL;
+    }
+    
+    public String getIdentificador()
+    {
+    	return nombre;
+    }
 	
 }

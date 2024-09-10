@@ -54,11 +54,6 @@ public class ClienteCorporativo extends Cliente
         return jobject;
     }
     
-    public List<Tiquete> getTiquetesSinUsar()
-    {
-    	return this.tiquetesSinUsar;
-    }
-    
     public int getTamanoEmpresa()
     {
     	return this.tamanoEmpresa;
@@ -66,6 +61,16 @@ public class ClienteCorporativo extends Cliente
     
     public String getTipoCliente()
     {
+    	return CORPORATIVO;
+    }
     
+    public String getIdentificador()
+    {
+    	return nombreEmpresa;
+    }
+    
+    public String getNombreEmpresa()
+    {
+    	return nombreEmpresa;
     }
 }

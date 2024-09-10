@@ -13,22 +13,16 @@ public abstract class Cliente {
 	protected List<Tiquete> tiquetesSinUsar;
 	
 	private List<Tiquete> tiquetesUsados;
-	
-	private String identificador;
-	
+		
 	//Metodos
 	
-	public Cliente(String identificador)
+	public Cliente()
 	{
 		tiquetesSinUsar = new ArrayList<Tiquete>();
 		tiquetesUsados = new ArrayList<Tiquete>();	
-		this.identificador = identificador;
 	}
 	
-	public  java.lang.String getIdentificador()
-	{
-		return this.identificador;
-	}
+	public  abstract String getIdentificador();
 	
 	public abstract java.lang.String getTipoCliente();
 	
@@ -38,7 +32,8 @@ public abstract class Cliente {
 	}	
 	public int calcularValorTotalTiquetes()
 	{
-		return (int) size(tiquetesUsados) * CalculadoraTarifas.calcularTarifa(Vuelo vuelo, null);
+		CalculadoraTarifas calculadoraTarifas = (CalculadoraTarifas);
+		return (int) tiquetesUsados.size();
 	}
 	
 	public void usarTiquetes(Vuelo vuelo)
@@ -50,7 +45,7 @@ public abstract class Cliente {
 			if (tiquete.getVuelo().equals(vuelo));
 			{
 				tiquetesUsados.add(tiquete);
-				iterator.remove()
+				iterator.remove();
 			}
 		}
 	}
